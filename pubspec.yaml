@@ -1,0 +1,55 @@
+name: media_kit
+description: A complete video & audio playback library for Flutter & Dart. Performant, stable, feature-proof & modular.
+homepage: https://github.com/alexmercerind/media_kit
+repository: https://github.com/alexmercerind/media_kit
+version: 1.0.2
+funding:
+  - https://www.github.com/sponsors/alexmercerind
+screenshots:
+  - description: "package:media_kit running on Android (visible controls)"
+    path: screenshots/android_0.jpg
+  - description: "package:media_kit running on Android"
+    path: screenshots/android_1.jpg
+  - description: "package:media_kit running on iOS (visible controls)"
+    path: screenshots/ios_0.jpg
+  - description: "package:media_kit running on iOS"
+    path: screenshots/ios_1.jpg
+  - description: "package:media_kit running on macOS"
+    path: screenshots/macos.jpg
+  - description: "package:media_kit running on Microsoft Windows"
+    path: screenshots/windows.jpg
+  - description: "package:media_kit running on GNU/Linux"
+    path: screenshots/linux.jpg
+  - description: "package:media_kit running on web"
+    path: screenshots/web.jpg
+topics:
+  - video
+  - video-player
+  - audio
+  - audio-player
+
+environment:
+  sdk: ">=2.17.0 <4.0.0"
+
+dependencies:
+  ffi: ^2.0.1
+  meta: ^1.8.0
+  path: ^1.8.0
+  uri_parser: ^2.0.2
+  collection: ^1.17.0
+  synchronized: ^3.1.0
+  http: ">=0.13.0 <2.0.0"
+  safe_local_storage: ^1.0.2
+  universal_platform: ^1.0.0+1
+
+dev_dependencies:
+  test: ^1.24.1
+  lints: ^2.1.1
+
+ffigen:
+  name: MPV
+  output: bin/generated/libmpv/bindings.dart
+  headers:
+    entry-points:
+      - headers/client.h
+  dart-bool: true
